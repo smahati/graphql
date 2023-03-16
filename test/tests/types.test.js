@@ -975,10 +975,7 @@ describe('graphql - types parsing and validation', () => {
   })
 
   // Note: maps to same type as cds.Binary
-  // REVISIT: express-graphql limits request body size to 100kb by default:
-  // - https://github.com/graphql/express-graphql/issues/346
-  // - https://github.com/graphql/express-graphql/blob/28e4c2924ea6984bf918465cefdadae340d8780e/src/parseBody.ts#L96
-  describe.skip('cds.LargeBinary', () => {
+  describe('cds.LargeBinary', () => {
     const field = 'myLargeBinary'
     const buffer = _getTestBuffer(500000)
 
@@ -1032,10 +1029,7 @@ describe('graphql - types parsing and validation', () => {
   })
 
   // Note: maps to same type as cds.String
-  // REVISIT: express-graphql limits request body size to 100kb by default:
-  // - https://github.com/graphql/express-graphql/issues/346
-  // - https://github.com/graphql/express-graphql/blob/28e4c2924ea6984bf918465cefdadae340d8780e/src/parseBody.ts#L96
-  describe.skip('cds.LargeString', () => {
+  describe('cds.LargeString', () => {
     const field = 'myLargeString'
     const value = (() => {
       let string = ''
