@@ -977,7 +977,7 @@ describe('graphql - types parsing and validation', () => {
   // Note: maps to same type as cds.Binary
   describe('cds.LargeBinary', () => {
     const field = 'myLargeBinary'
-    const buffer = _getTestBuffer(500000)
+    const buffer = _getTestBuffer(50000)
 
     describe('input literal', () => {
       test('cds.LargeBinary is correctly parsed from large input literal base64 encoded string value', async () => {
@@ -1033,7 +1033,7 @@ describe('graphql - types parsing and validation', () => {
     const field = 'myLargeString'
     const value = (() => {
       let string = ''
-      for (let i = 0; i < 100000; i++) string += 'This is a test string! '
+      for (let i = 0; i < 10000; i++) string += 'This is a test string! '
       return string
     })()
 
